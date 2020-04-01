@@ -13,7 +13,7 @@
 
                 <div> 
                     <label>Cedula:</label>
-                    <input class="myInput" required />
+                    <input id="cedula" class="myInput" required />
                 </div>
 
                 <div> 
@@ -41,10 +41,12 @@
                     <input class="myInput"  required />
                 </div>
                 <div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" onclick="add_element()" >Enviar</button>
                 </div>
             </form>
         </div>
+
+        <div id=disp></div>
         <script src="../Scripts/retrievingSolicitud.js"></script>
     </body>
 </html>
