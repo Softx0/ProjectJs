@@ -1,29 +1,15 @@
-<<<<<<< master
-<<<<<<< HEAD
-let myArray = [];
-let formInputs = document.getElementsByClassName('myInput');
+let data = new Array(); // creating array
 
-let formData = Array.prototype.filter.call(formInputs, function(element){
-    return console.log(element.value);
-});
-=======
-// let myArray = [];
-// let formInputs = document.getElementsByClassName('myInput');
-
-// let formData = Array.prototype.filter.call(formInputs, function(element){
-//     return console.log(element.value);
-// });
-
-var data = [];
-var inputs = document.getElementsByTagName('input');
-for(var i=0; i< inputs.length; i++)
-=======
-let data = [];
-let inputs = document.getElementsByTagName('input');
-for(let i=0; i< inputs.length; i++)
->>>>>>> modify js file
-{
-  data.push(inputs[i].value);
+function add_element(){
+    data.push(document.getElementById('cedula').value); // adding element to array
+    document.getElementById('cedula').value=''; // Making the text box blank
+    display(); // displaying the array elements
 }
-console.log(data);
->>>>>>> Emmanuel
+
+function display(){
+    let str = "";
+    for (i=0;i<data.length;i++){ 
+        str += data[i] + "<br >";
+    }
+    document.getElementById('disp').innerHTML = str;
+}
