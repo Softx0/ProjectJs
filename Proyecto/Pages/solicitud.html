@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <div>
-            <form id="solicitudId" action="">
 
-                <div> 
-                    <label>Cedula:</label>
-                    <input id="cedula" type="text" class="myInput" required />
-                </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
 
-                <div> 
-                    <label>Nombre:</label>
-                    <input id="nombre" class="myInput" type="text" required />
-                </div>
+<body>
+    <div>
+        <form id="solicitudId" action="">
 
-                <div> 
-                    <label>Edad:</label>
-                    <input id="edad" class="myInput" type="text" required />
-                </div>
+            <div>
+                <label>Cedula:</label>
+                <input id="cedula" type="number" required />
+            </div>
 
-                <div> 
-                    <label>Direccion:</label>
-                    <input id="direccion" class="myInput" type="text" />
-                </div>
+            <div>
+                <label>Nombre:</label>
+                <input id="nombre" type="text" required />
+            </div>
 
-                <div> 
-                    <label>Telefono:</label>
-                    <input id="telefono" class="myInput" type="text" />
-                </div>
+            <div>
+                <label>Edad:</label>
+                <input id="edad" type="number" required />
+            </div>
 
-                <div> 
-                    <label>Email:</label>
-                    <input id="email" class="myInput" type="text" required />
-                </div>
-                <div>
-                    <button type="submit" onclick="add_element()" >Enviar</button>
-                </div>
-            </form>
-        </div>
+            <div>
+                <label>Direccion:</label>
+                <input id="direccion" type="text" />
+            </div>
 
-        <div>
-            <table id="idTable" >
-                <thead>
+            <div>
+                <label>Telefono:</label>
+                <input id="telefono" type="number" />
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input id="email" type="email" required />
+            </div>
+
+            <div>
+                <button id="btn-guardar" type="submit" onclick="guardar()">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <table id="idTable">
+            <thead>
+                <tr>
                     <th>Cedula</th>
                     <th>Nombre</th>
                     <th>Edad</th>
                     <th>Direccion</th>
                     <th>Telefono</th>
                     <th>Email</th>
-                </thead>
-                
-            </table>
-        </div>
-        <script src="../Scripts/retrievingSolicitud.js"></script>
-    </body>
+                </tr>
+            </thead>
+            <tbody id="myBody">
+
+            </tbody>
+        </table>
+    </div>
+    <!--<div id=disp ></div>  -->
+
+
+    <script src="../Scripts/solicitud.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"  ></script> -->
+</body>
+
 </html>
