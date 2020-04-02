@@ -14,6 +14,13 @@
         <form id="registroId" action="">
 
             <div>
+                <label>Cantidad de Asignatura:</label>
+                <input type="text" id="cantAsignatura" />
+                <input type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
+
+            </div>
+            <br>
+            <div>
                 <label>Asignatura:</label>
                 <input id="asignatura" type="text" required />
             </div>
@@ -35,10 +42,9 @@
             <br>
             <div>
                 <button type="submit" onclick="add_element()">Agregar</button>
-            </div>
-            <div>
                 <button type="submit" onclick="display()">Enviar</button>
             </div>
+            <br>
         </form>
     </div>
     <div>
