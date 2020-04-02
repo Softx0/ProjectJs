@@ -1,76 +1,77 @@
 <!DOCTYPE html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
-    <div>
-        <form id="solicitudId" action="">
-
-            <div>
-                <label>Cedula:</label>
-                <input id="cedula" type="number" required />
-            </div>
-
-            <div>
-                <label>Nombre:</label>
-                <input id="nombre" type="text" required />
-            </div>
-
-            <div>
-                <label>Edad:</label>
-                <input id="edad" type="number" required />
-            </div>
-
-            <div>
-                <label>Direccion:</label>
-                <input id="direccion" type="text" />
-            </div>
-
-            <div>
-                <label>Telefono:</label>
-                <input id="telefono" type="number" />
-            </div>
-
-            <div>
-                <label>Email:</label>
-                <input id="email" type="email" required />
-            </div>
-
-            <div>
-                <button id="btn-guardar" type="submit" onclick="guardar()">Enviar</button>
-            </div>
-        </form>
-    </div>
-
-    <div>
-        <table id="idTable">
-            <thead>
-                <tr>
-                    <th>Cedula</th>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody id="myBody">
-
-            </tbody>
-        </table>
-    </div>
-    <!--<div id=disp ></div>  -->
-
-
-    <script src="../Scripts/solicitud.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"  ></script> -->
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head> 
+    <body>
+        <div>
+            <form id="solicitudId" action="">
+                <div>
+                    <label>Cantidad de Solicitudes:</label>
+                    <input type="text" id="cantSolicitud" />
+                    <input type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
+                </div>
+                <br/>
+                <div> 
+                    <label>Cedula:</label>
+                    <input id="cedula" type="number"  required />
+                </div> 
+                <div> 
+                    <label>Nombre:</label>
+                    <input id="nombre" type="text" required />
+                </div> 
+                <div> 
+                    <label>Edad:</label>
+                    <input id="edad" type="number" required />
+                </div> 
+                <div> 
+                    <label>Direccion:</label>
+                    <input id="direccion" type="text" />
+                </div> 
+                <div> 
+                    <label>Telefono</label>
+                    <input id="telefono" type="number" />
+                </div> 
+                <div> 
+                    <label>Email:</label>
+                    <input id="email" type="email" required />
+                </div>
+                <div>
+                    <button id="btn-agregar" type="submit" onclick="add_element()" >Agregar</button>
+                    <input id="btn-enviar" value="Enviar" disabled type="button" onclick="display()" />
+                </div>
+            </form>
+        </div>
+        <br/>
+        <div >
+            <table id="idTable" border="1">
+                <thead>
+                    <tr id="row0">
+                        <th>Cedula</th>
+                    </tr>
+                    <tr id="row1">
+                        <th>Nombre</th>
+                    </tr>
+                    <tr id="row2">
+                        <th>Edad</th>
+                    </tr>
+                    <tr id="row3">
+                        <th>Direccion</th>
+                    </tr>
+                    <tr id="row4">
+                        <th>Telefono</th>
+                    </tr>
+                    <tr id="row5">
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                
+            </table> 
+        </div> 
+        <script src="../Scripts/solicitud.js"></script>
+    </body>
 </html>
