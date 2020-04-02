@@ -30,19 +30,40 @@
             <br>
             <div>
                 <label>Exámen final:</label>
-                <input id="final" type="text" />
+                <input id="final" type="text" required />
             </div>
             <br>
             <div>
-                <button type="submit" onclick="add_element()">Enviar</button>
+                <button type="submit" onclick="add_element()">Agregar</button>
+            </div>
+            <div>
+                <button type="submit" onclick="display()">Enviar</button>
             </div>
         </form>
     </div>
+    <div>
+        <table id="table" border="1">
+            <tr id="row0">
+                <th>Asignatura</th>
+            </tr>
+            <tr id="row1">
+                <th>Examen Parcial</th>
+            </tr>
+            <tr id="row2">
+                <th>Practicas</th>
+            </tr>
+            <tr id="row3">
+                <th>Examen final</th>
+            </tr>
 
-    <div id=disp>
+
+
+        </table>
 
     </div>
-    <script src="../Scripts/calculadora.js"></script>
+    <!-- <div id=disp></div> -->
+
+    <script src="../Scripts/registro.js"></script>
 </body>
 
 </html>
