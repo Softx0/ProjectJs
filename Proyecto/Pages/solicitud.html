@@ -13,32 +13,32 @@
 
                 <div> 
                     <label>Cedula:</label>
-                    <input id="cedula" class="myInput" required />
+                    <input id="cedula" type="text" class="myInput" required />
                 </div>
 
                 <div> 
                     <label>Nombre:</label>
-                    <input class="myInput"  required />
+                    <input id="nombre" class="myInput" type="text" required />
                 </div>
 
                 <div> 
                     <label>Edad:</label>
-                    <input class="myInput"  required />
+                    <input id="edad" class="myInput" type="text" required />
                 </div>
 
                 <div> 
                     <label>Direccion:</label>
-                    <input class="myInput"  />
+                    <input id="direccion" class="myInput" type="text" />
                 </div>
 
                 <div> 
                     <label>Telefono:</label>
-                    <input class="myInput"  />
+                    <input id="telefono" class="myInput" type="text" />
                 </div>
 
                 <div> 
                     <label>Email:</label>
-                    <input class="myInput"  required />
+                    <input id="email" class="myInput" type="text" required />
                 </div>
                 <div>
                     <button type="submit" onclick="add_element()" >Enviar</button>
@@ -46,7 +46,9 @@
             </form>
         </div>
 
-        <div id=disp></div>
+        <div id=disp>
+            
+        </div>
         <script src="../Scripts/retrievingSolicitud.js"></script>
     </body>
 </html>
