@@ -58,14 +58,9 @@ function display(){
 }
 
 
-// let obj = {};
+function addRow(){
+    let theTable = document.getElementById('idTable');
 
-// function add_element(){
-//     let form = document.getElementById("solicitudId");
-//     form.children.forEach(function(elm){
-//         if(elm.type === 'text'){
-//             obj[elm.name] = elm.value;
-//           }
-//       });   
-//     console.log(obj);
-// }
+    let rowCount = theTable.rows.length;
+    console.log(rowCount);
+}
