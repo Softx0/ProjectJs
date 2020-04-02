@@ -80,6 +80,8 @@ if(arrayPractica.length == cantidad){
         n++;
         }    
     } else {
-        alert("Deben ingresarse por lo menos " +cantidad+ " asignaturas.");
+        let faltante = cantidad - arrayFinal.length;
+        console.log(faltante);
+        alert("Deben ingresarse por lo menos " +cantidad+ " asignaturas. Faltan " + faltante +".");
     }
 }
