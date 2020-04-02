@@ -23,28 +23,36 @@
             <div>
                 <label>Asignatura:</label>
                 <input id="asignatura" type="text" required />
+
             </div>
+
             <br>
             <div>
                 <label>Examen parcial:</label>
                 <input id="parcial" type="text" required />
             </div>
+            <div id="error" style="color: red;"></div>
+
             <br>
             <div>
                 <label>Prácticas:</label>
                 <input id="practicas" type="text" required />
             </div>
+            <div id="error1" style="color: red;"></div>
+
             <br>
             <div>
                 <label>Exámen final:</label>
                 <input id="final" type="text" required />
             </div>
+            <div id="error2" style="color: red;"></div>
             <br>
             <div>
                 <button type="submit" onclick="add_element()">Agregar</button>
                 <button type="submit" onclick="display()">Enviar</button>
             </div>
             <br>
+
         </form>
     </div>
     <div>
@@ -61,10 +69,24 @@
             <tr id="row3">
                 <th>Examen final</th>
             </tr>
-
-
-
         </table>
+
+        <form id="operaciones">
+            <div>
+                <label>Seleccionar asignatura:</label>
+                <input id="selectAsig" type="text" required />
+            </div>
+            <div>
+                <label>Seleccionar asignatura:</label>
+                <input id="selectAsig" type="text" required />
+            </div>
+            <div>
+                <button type="submit" onclick="">Sumatoria de las notas</button>
+                <button type="submit" onclick="">Promedio</button>
+                <button type="submit" onclick="">Valor mayor</button>
+                <button type="submit" onclick="">Valor menor</button>
+            </div>
+        </form>
 
     </div>
     <!-- <div id=disp></div> -->
