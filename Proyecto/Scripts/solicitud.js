@@ -7,27 +7,27 @@ let email = new Array();
 
 function add_element(){
 
-    let myCedula = document.getElementById('cedula').value;
+    // let myCedula = document.getElementById('cedula').value;
     cedula.push(document.getElementById('cedula').value); 
     document.getElementById('cedula').value = '';
     
-    let myNombre = document.getElementById('nombre').value
+    // let myNombre = document.getElementById('nombre').value
     nombre.push(document.getElementById('nombre').value); 
     document.getElementById('nombre').value = '';
 
-    let myEdad = document.getElementById('edad').value
+    // let myEdad = document.getElementById('edad').value
     edad.push(document.getElementById('edad').value); 
     document.getElementById('edad').value = '';
 
-    let myDireccion = document.getElementById('direccion').value
+    // let myDireccion = document.getElementById('direccion').value
     direccion.push(document.getElementById('direccion').value); 
     document.getElementById('direccion').value = '';
 
-    let myTelefono = document.getElementById('telefono').value
+    // let myTelefono = document.getElementById('telefono').value
     telefono.push(document.getElementById('telefono').value); 
     document.getElementById('telefono').value = '';
 
-    let myEmail = document.getElementById('email').value
+    // let myEmail = document.getElementById('email').value
     email.push(document.getElementById('email').value); 
     document.getElementById('email').value = '';
     
@@ -60,20 +60,3 @@ function display(){
 
      document.getElementById('disp').innerHTML = str1;
 }
-
-// function addRow(){
-//     let theTable = document.getElementById('idTable');
-//     let rowCount = theTable.rows.length;
-
-//     let tr = theTable.insertRow(rowCount);
-//     tr = theTable.insertRow(rowCount);
-
-//     for (let index = 0; index < header.length; index++) {
-//         let td = document.createElement('td');
-//         td = tr.insertCell(index);
-
-//     }
-
-//     console.log(rowCount);
-// }
-
