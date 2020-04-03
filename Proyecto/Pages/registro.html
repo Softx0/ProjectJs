@@ -16,7 +16,7 @@
             <div>
                 <label>Cantidad de Asignatura:</label>
                 <input type="number" id="cantAsignatura" />
-                <input type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
+                <input id="button1" type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
 
             </div>
             <br>
@@ -48,8 +48,8 @@
             <div id="error2" style="color: red;"></div>
             <br>
             <div>
-                <button type="submit" onclick="add_element()">Agregar</button>
-                <button type="submit" onclick="display()">Enviar</button>
+                <button id="button2" type="submit" onclick="add_element()">Agregar</button>
+                <button id="button3" disabled type="submit" onclick="display()">Enviar</button>
             </div>
             <br>
 
@@ -79,7 +79,7 @@
             </div>
             <br>
             <div>
-                <label>Seleccionar asignatura:</label>
+                <label>Seleccionar nota:</label>
                 <input id="selectAsig" type="text" required />
             </div>
             <br>

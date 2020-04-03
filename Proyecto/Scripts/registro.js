@@ -4,11 +4,14 @@ let arrayPractica = Array();
 let arrayFinal = Array();
 let table = document.getElementById("table");
 let cantidad = 0;
-
+const btnCantidad = document.getElementById("button1");
+const btnAgregar = document.getElementById("button2");
+const btnEnviar = document.getElementById("button3");
 
 function getCantidad() {
     cantidad = (Number(document.getElementById("cantAsignatura").value));
     console.log(cantidad);
+    btnCantidad.setAttribute('disabled','');
 }
 
 function add_element() {
@@ -48,6 +51,11 @@ function add_element() {
             document.getElementById('final').value = '';
             console.log(arrayFinal);
             break;
+        }
+
+        if(arrayFinal.length == cantidad){
+            btnEnviar.removeAttribute('disabled');
+            btnAgregar.setAttribute('disabled', '');
         }
     }
 }
