@@ -22,59 +22,61 @@ function getCantidad() {
 
 function add_element() {
 
-    while (arrayCedula.length <= cantidad) {
-        arrayCedula.push(document.getElementById('cedula').value);
-        document.getElementById('cedula').value = '';
-        console.log(arrayCedula);
-        break;
+    let cedula = document.getElementById('cedula').value;
+    let nombre = document.getElementById('nombre').value;
+    let edad = document.getElementById('edad').value;
+    let email = document.getElementById('email').value;
+
+    if (cedula != "" && nombre != "" && edad != "" && email != "") {
+
+        while (arrayCedula.length <= cantidad) {
+            arrayCedula.push(document.getElementById('cedula').value);
+            document.getElementById('cedula').value = '';
+            console.log(arrayCedula);
+            break;
+        }
+
+        while (arrayNombre.length <= cantidad) {
+            arrayNombre.push(document.getElementById('nombre').value);
+            document.getElementById('nombre').value = '';
+            console.log(arrayNombre);
+            break;
+        }
+
+        while (arrayEdad.length <= cantidad) {
+            arrayEdad.push(document.getElementById('edad').value);
+            document.getElementById('edad').value = '';
+            console.log(arrayEdad);
+            break;
+        }
+
+        while (arrayDireccion.length <= cantidad) {
+            arrayDireccion.push(document.getElementById('direccion').value);
+            document.getElementById('direccion').value = '';
+            console.log(arrayDireccion);
+            break;
+        }
+
+        while (arrayTelefono.length <= cantidad) {
+            arrayTelefono.push(document.getElementById('telefono').value);
+            document.getElementById('telefono').value = '';
+            console.log(arrayTelefono);
+            break;
+        }
+
+        while (arrayEmail.length <= cantidad) {
+            arrayEmail.push(document.getElementById('email').value);
+            document.getElementById('email').value = '';
+            console.log(arrayEmail);
+            break;
+        }
+
+        if (arrayEmail.length == cantidad) {
+            btnEnviar.removeAttribute('disabled');
+            btnAgregar.setAttribute('disabled', '');
+        }
     }
-
-    while (arrayNombre.length <= cantidad) {
-        arrayNombre.push(document.getElementById('nombre').value);
-        document.getElementById('nombre').value = '';
-        console.log(arrayNombre);
-        break;
-    }
-
-    while (arrayEdad.length <= cantidad) {
-        arrayEdad.push(document.getElementById('edad').value);
-        document.getElementById('edad').value = '';
-        console.log(arrayEdad);
-        break;
-    }
-
-    while (arrayDireccion.length <= cantidad) {
-        arrayDireccion.push(document.getElementById('direccion').value);
-        document.getElementById('direccion').value = '';
-        console.log(arrayDireccion);
-        break;
-    }
-
-    while (arrayTelefono.length <= cantidad) {
-        arrayTelefono.push(document.getElementById('telefono').value);
-        document.getElementById('telefono').value = '';
-        console.log(arrayTelefono);
-        break;
-    }
-
-    while (arrayEmail.length <= cantidad) {
-        arrayEmail.push(document.getElementById('email').value);
-        document.getElementById('email').value = '';
-        console.log(arrayEmail);
-        break;
-    }
-
-    if (arrayEmail.length == cantidad) {
-        btnEnviar.removeAttribute('disabled');
-        btnAgregar.setAttribute('disabled', '');
-    }
-
-
-
-    // display();
-
 }
-
 
 function display() {
 
@@ -113,8 +115,8 @@ function display() {
             let m = 1;
             let cell2;
             switch ((arrayEdad[index] >= 60) ? 0 :
-                    (40 <= arrayEdad[index] && arrayEdad[index] <= 59) ? 1 : 
-                    (20 <= arrayEdad[index] && arrayEdad[index] <= 39) ? 2 : 3){
+                (40 <= arrayEdad[index] && arrayEdad[index] <= 59) ? 1 :
+                    (20 <= arrayEdad[index] && arrayEdad[index] <= 39) ? 2 : 3) {
                 case 0:
                     cell2 = row6.insertCell(m);
                     cell2.innerHTML = arrayCategoria[3];
@@ -130,7 +132,7 @@ function display() {
                 case 3:
                     cell2 = row6.insertCell(m);
                     cell2.innerHTML = arrayCategoria[0];
-                    break
+                    break;
             }
             m++;
         }
@@ -163,8 +165,4 @@ function display() {
         console.log(faltante);
         alert("Deben ingresarse por lo menos " + cantidad + " solicitudes. Faltan " + faltante + ".");
     }
-
-
-
 }
-
