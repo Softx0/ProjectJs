@@ -133,8 +133,5 @@ function display() {
         alert("Deben ingresarse por lo menos " + cantidad + " solicitudes. Faltan " + faltante + ".");
     }
 
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> Emmanuel

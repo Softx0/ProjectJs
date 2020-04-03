@@ -16,35 +16,24 @@ function add_element() {
     let parcial = Number(document.getElementById('parcial').value);
     let practica = Number(document.getElementById('practicas').value);
     let final = Number(document.getElementById('final').value);
+  
+        if (parcial <= 30 && practica<=40 && final<=40){
 
-    while (arrayAsignatura.length <= cantidad) {
-        arrayAsignatura.push(document.getElementById('asignatura').value);
-        document.getElementById('asignatura').value = '';
-        console.log(arrayAsignatura);
-        break;
-    }
-
-    if (parcial > 30) {
-
-        document.getElementById('error').innerHTML = "El parcial debe ser menor o igual a 30";
+            while (arrayAsignatura.length <= cantidad) {
+                arrayAsignatura.push(document.getElementById('asignatura').value);
+                document.getElementById('asignatura').value = '';
+                console.log(arrayAsignatura);
+                break;
+            }
         
-    } else {
-
-        while (arrayParcial.length <= cantidad) {
+            while (arrayParcial.length <= cantidad) {
 
             arrayParcial.push(parcial);
             document.getElementById('parcial').value = '';
             console.log(arrayParcial);
             break;
         }
-    }
-
-    if (practica > 40) {
-
-        document.getElementById('error1').innerHTML = "La practica debe ser menor o igual a 40";  
-
-    } else {
-
+        
         while (arrayPractica.length <= cantidad) {
 
             arrayPractica.push(practica);
@@ -52,14 +41,7 @@ function add_element() {
             console.log(arrayPractica);
             break;
         }
-    }
-
-    if (final > 40) {
-
-        document.getElementById('error2').innerHTML = "La nota final debe ser menor o igual a 40";     
-
-    } else {
-
+        
         while (arrayFinal.length <= cantidad) {
 
             arrayFinal.push(final);
@@ -68,12 +50,9 @@ function add_element() {
             break;
         }
     }
-
-    if (practica > 40 || final > 40 || parcial > 30){
-        arrayAsignatura.pop();
-        console.log(arrayAsignatura);
-    }
 }
+   
+
 
 function display() {
 
@@ -81,7 +60,7 @@ function display() {
     let row1 = document.getElementById("row1");
     let row2 = document.getElementById("row2");
     let row3 = document.getElementById("row3");
-    
+
     if (arrayAsignatura.length == cantidad) {
         for (let index = 0; index < arrayAsignatura.length; index++) {
             let n = 1;

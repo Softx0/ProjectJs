@@ -15,7 +15,7 @@
 
             <div>
                 <label>Cantidad de Asignatura:</label>
-                <input type="text" id="cantAsignatura" />
+                <input type="number" id="cantAsignatura" />
                 <input type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
 
             </div>
@@ -29,21 +29,21 @@
             <br>
             <div>
                 <label>Examen parcial:</label>
-                <input id="parcial" type="text" required />
+                <input id="parcial" type="number" name="parcial" value="0" min="0" max="30" required />
             </div>
             <div id="error" style="color: red;"></div>
 
             <br>
             <div>
                 <label>Prácticas:</label>
-                <input id="practicas" type="text" required />
+                <input id="practicas" type="number" name="practicas" value="0" min="0" max="40" required />
             </div>
             <div id="error1" style="color: red;"></div>
 
             <br>
             <div>
                 <label>Exámen final:</label>
-                <input id="final" type="text" required />
+                <input id="final" type="number" name="final" value="0" min="0" max="40" required />
             </div>
             <div id="error2" style="color: red;"></div>
             <br>
@@ -70,16 +70,19 @@
                 <th>Examen final</th>
             </tr>
         </table>
+        <br>
 
         <form id="operaciones">
             <div>
                 <label>Seleccionar asignatura:</label>
                 <input id="selectAsig" type="text" required />
             </div>
+            <br>
             <div>
                 <label>Seleccionar asignatura:</label>
                 <input id="selectAsig" type="text" required />
             </div>
+            <br>
             <div>
                 <button type="submit" onclick="">Sumatoria de las notas</button>
                 <button type="submit" onclick="">Promedio</button>
