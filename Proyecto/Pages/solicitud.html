@@ -6,61 +6,72 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-    </head>
+    </head> 
     <body>
         <div>
             <form id="solicitudId" action="">
-
+                <div>
+                    <label>Cantidad de Solicitudes:</label>
+                    <input type="text" id="cantSolicitud" />
+                    <input type="button" id="button1" value="Ingresar" onclick="getCantidad()" />
+                </div>
+                <br/>
                 <div> 
                     <label>Cedula:</label>
-                    <input id="cedula" type="text" class="myInput" required />
-                </div>
-
+                    <input id="cedula" type="number"  required />
+                </div> 
                 <div> 
                     <label>Nombre:</label>
-                    <input id="nombre" class="myInput" type="text" required />
-                </div>
-
+                    <input id="nombre" type="text" required />
+                </div> 
                 <div> 
                     <label>Edad:</label>
-                    <input id="edad" class="myInput" type="text" required />
-                </div>
-
+                    <input id="edad" type="number" required />
+                </div> 
                 <div> 
                     <label>Direccion:</label>
-                    <input id="direccion" class="myInput" type="text" />
-                </div>
-
+                    <input id="direccion" type="text" />
+                </div> 
                 <div> 
                     <label>Telefono</label>
-                    <input id="telefono" class="myInput" type="text" />
-                </div>
-
+                    <input id="telefono" type="number" />
+                </div> 
                 <div> 
                     <label>Email:</label>
-                    <input id="email" class="myInput" type="text" required />
+                    <input id="email" type="email" required />
                 </div>
                 <div>
-                    <button type="submit" onclick="add_element()" >Enviar</button>
+                    <button id="btn-agregar" type="submit" onclick="add_element()" >Agregar</button>
+                    <input id="btn-enviar" value="Enviar" disabled type="button" onclick="display()" />
                 </div>
             </form>
         </div>
-
+        <br/>
         <div >
-            <table id="idTable" >
+            <table id="idTable" border="1">
                 <thead>
-                    <th>Cedula</th>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th>Email</th>
+                    <tr id="row0">
+                        <th>Cedula</th>
+                    </tr>
+                    <tr id="row1">
+                        <th>Nombre</th>
+                    </tr>
+                    <tr id="row2">
+                        <th>Edad</th>
+                    </tr>
+                    <tr id="row3">
+                        <th>Direccion</th>
+                    </tr>
+                    <tr id="row4">
+                        <th>Telefono</th>
+                    </tr>
+                    <tr id="row5">
+                        <th>Email</th>
+                    </tr>
                 </thead>
                 
-            </table>
-
-        </div>
-        <div id=disp ></div>
+            </table> 
+        </div> 
         <script src="../Scripts/solicitud.js"></script>
     </body>
 </html>
