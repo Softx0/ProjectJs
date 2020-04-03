@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conversor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h3>Conversor de Grados</h3>
+    <form>
+        <div>
+            <div>
+                De: <select id="conversor-grados-desde">
+                    <option value="1">Celsius</option>
+                    <option value="2">Farenheit</option>
+                    <option value="3">Kelvin</option>
+                </select>
+                <input id="conversor-desde" value="0" type="number" required />
+                <br />
+                Hasta: <select id="conversor-grados-hasta">
+                    <option value="1">Farenheit</option>
+                    <option value="2">Celsius</option>
+                    <option value="3">Kelvin</option>
+                </select>
+                <input id="conversor-hasta" value="0" type="number" required />
+            </div>
+            <br />
+            <button id="btn-convertir" onclick="convertirGrados()">Convertir</button>
+        </div>
+    </form>
+    <div id="valores"></div>
+    <hr />
+    <script src="../Scripts/conversor.js"></script>
+</body>
+
+</html>
