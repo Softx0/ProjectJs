@@ -79,15 +79,29 @@
             </div>
             <br>
             <div>
-                <label>Seleccionar nota:</label>
-                <input id="selectAsig" type="text" required />
+                <button type="submit" onclick="sumCalificaciones()">Sumatoria de las notas</button>
+                <div id="sumatoria"></div>
             </div>
             <br>
             <div>
-                <button type="submit" onclick="">Sumatoria de las notas</button>
-                <button type="submit" onclick="">Promedio</button>
-                <button type="submit" onclick="">Valor mayor</button>
-                <button type="submit" onclick="">Valor menor</button>
+                <label>Seleccionar nota:</label>
+                <select id="selectNota">
+                    <option value="1">Examen Parcial</option>
+                    <option value="2">Practicas</option>
+                    <option value="3">Examen Final</option>
+                </select>
+            </div>
+            <br>
+            <div><button type="submit" onclick="calcPromedio()">Promedio</button>
+                <div id="promedio"></div>
+            </div>
+            <br>
+            <div><button type="submit" onclick="getMayor()">Valor mayor</button>
+                <div id="mayor"></div>
+            </div>
+            <br>
+            <div><button type="submit" onclick="getMenor()">Valor menor</button>
+                <div id="menor"></div>
             </div>
         </form>
 
