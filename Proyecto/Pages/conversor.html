@@ -11,27 +11,32 @@
 
 <body>
     <h3>Conversor de Grados</h3>
-    <form>
-        <div>
+    <div>
+        <form>
             <div>
-                De: <select id="conversor-grados-desde">
-                    <option value="1">Celsius</option>
-                    <option value="2">Farenheit</option>
-                    <option value="3">Kelvin</option>
-                </select>
-                <input id="conversor-desde" value="0" type="number" required />
-                <br />
+                <div>
+                    <select id="conversor-grados">
+                        <option value="1">Celsius a Farenheit</option>
+                        <option value="2">Celsius a Kelvin</option>
+                        <option value="3">Farenheit a Celsius</option>
+                        <option value="4">Farenheit a Kelvin</option>
+                        <option value="5">Kelvin a Celsius</option>
+                        <option value="6">Kelvin a Farenheit</option>
+                    </select>
+                    <input id="conversor" type="number" />
+                    <!-- <br />
                 Hasta: <select id="conversor-grados-hasta">
                     <option value="1">Farenheit</option>
                     <option value="2">Celsius</option>
                     <option value="3">Kelvin</option>
                 </select>
-                <input id="conversor-hasta" value="0" type="number" required />
+                <input id="conversor-hasta" type="number" required /> -->
+                </div>
+                <br />
+                <input id="btn-convertir" type="button" value="Convertir" onclick="convertirGrados()"/>
             </div>
-            <br />
-            <button id="btn-convertir" onclick="convertirGrados()">Convertir</button>
-        </div>
-    </form>
+        </form>
+    </div>
     <div id="valores"></div>
     <hr />
     <script src="../Scripts/conversor.js"></script>
