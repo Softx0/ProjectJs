@@ -23,22 +23,41 @@
                         <option value="5">Kelvin a Celsius</option>
                         <option value="6">Kelvin a Farenheit</option>
                     </select>
-                    <input id="conversor" type="number" />
-                    <!-- <br />
-                Hasta: <select id="conversor-grados-hasta">
-                    <option value="1">Farenheit</option>
-                    <option value="2">Celsius</option>
-                    <option value="3">Kelvin</option>
-                </select>
-                <input id="conversor-hasta" type="number" required /> -->
+                    <input id="grados" type="number" />
                 </div>
-                <br />
-                <input id="btn-convertir" type="button" value="Convertir" onclick="convertirGrados()"/>
+                <br /> 
+                <input id="btn-convertir-grado" type="button" value="Convertir" onclick="convertirGrados()"/>
+                <br /><br />
+                <div id="resultado"></div> 
             </div>
         </form>
     </div>
-    <div id="valores"></div>
+ 
     <hr />
+
+    <h3>Conversor de Monedas</h3>
+    <div>
+        <form>
+            <div>
+                <div>
+                    <select id="conversor-monedas">
+                        <option value="1">RD$ a US$</option>
+                        <option value="2">RD$ a EUR$</option>
+                        <option value="3">US$ a RD$</option>
+                        <option value="4">US$ a EUR$</option>
+                        <option value="5">EUR$ a RD$</option>
+                        <option value="6">EUR$ a US$</option>
+                    </select>
+                    <input id="monedas" type="number" />
+                </div>
+                <br /> 
+                <input id="btn-convertir-moneda" type="button" value="Convertir $" onclick="convertirMonedas()"/>
+                <br /><br />
+                <div id="resultado1"></div> 
+            </div>
+        </form>
+    </div>
+
     <script src="../Scripts/conversor.js"></script>
 </body>
 
