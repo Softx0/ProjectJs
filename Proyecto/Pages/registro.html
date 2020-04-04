@@ -29,27 +29,27 @@
             <br>
             <div>
                 <label>Examen parcial:</label>
-                <input id="parcial" type="number" name="parcial" value="0" min="0" max="30" required />
+                <input id="parcial" type="number" name="parcial" min="0" max="30" required />
             </div>
             <div id="error" style="color: red;"></div>
 
             <br>
             <div>
                 <label>Prácticas:</label>
-                <input id="practicas" type="number" name="practicas" value="0" min="0" max="40" required />
+                <input id="practicas" type="number" name="practicas" min="0" max="40" required />
             </div>
             <div id="error1" style="color: red;"></div>
 
             <br>
             <div>
                 <label>Exámen final:</label>
-                <input id="final" type="number" name="final" value="0" min="0" max="40" required />
+                <input id="final" type="number" name="final" min="0" max="40" required />
             </div>
             <div id="error2" style="color: red;"></div>
             <br>
             <div>
-                <button id="button2" type="submit" onclick="add_element()">Agregar</button>
-                <button id="button3" disabled type="submit" onclick="display()">Enviar</button>
+                <input id="button2" type="button" onclick="add_element()" value="Agregar"></input>
+                <input id="button3" disabled type="button" onclick="display()" value="Enviar"></input>
             </div>
             <br>
 
@@ -71,7 +71,9 @@
             </tr>
         </table>
         <br>
+    </div>
 
+    <div>
         <form id="operaciones">
             <div>
                 <label>Seleccionar asignatura:</label>
@@ -79,19 +81,36 @@
             </div>
             <br>
             <div>
-                <label>Seleccionar nota:</label>
-                <input id="selectAsig" type="text" required />
+                <input type="button" onclick="sumCalificaciones()" value="Sumatoria de las notas"></input>
+                <div id="sumatoria"></div>
             </div>
             <br>
             <div>
-                <button type="submit" onclick="">Sumatoria de las notas</button>
-                <button type="submit" onclick="">Promedio</button>
-                <button type="submit" onclick="">Valor mayor</button>
-                <button type="submit" onclick="">Valor menor</button>
+                <label>Seleccionar nota:</label>
+                <select id="selectNota">
+                    <option value="1">Examen Parcial</option>
+                    <option value="2">Practicas</option>
+                    <option value="3">Examen Final</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="button" onclick="calcPromedio()" value="promedio"></input>
+                <div id="promedio"></div>
+            </div>
+            <br>
+            <div>
+                <input type="button" onclick="getMayor()" value="Valor mayor"></input>
+                <div id="mayor"></div>
+            </div>
+            <br>
+            <div>
+                <input type="button" onclick="getMenor()" value="Valor menor"></input>
+                <div id="menor"></div>
             </div>
         </form>
-
     </div>
+
     <!-- <div id=disp></div> -->
 
     <script src="../Scripts/registro.js"></script>
