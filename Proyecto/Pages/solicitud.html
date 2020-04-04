@@ -6,7 +6,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-    </head> 
+    </head>
+
     <body>
         <div>
             <form id="solicitudId" action="">
@@ -18,35 +19,42 @@
                 <br/>
                 <div> 
                     <label>Cedula:</label>
-                    <input id="cedula" type="number"  required />
+                    <input id="cedula" value="" type="number" required />
                 </div> 
+                <div id="validaCedula" style="color: red;"></div>
                 <div> 
                     <label>Nombre:</label>
-                    <input id="nombre" type="text" required />
+                    <input id="nombre" value="" type="text" required />
                 </div> 
+                <div id="validaNombre" style="color: red;"></div>
                 <div> 
                     <label>Edad:</label>
-                    <input id="edad" type="number" required />
+                    <input id="edad" value=""  type="number" required />
                 </div> 
+                <div id="validaEdad" style="color: red;"></div>
                 <div> 
                     <label>Direccion:</label>
-                    <input id="direccion" type="text" />
+                    <input id="direccion" value=""  type="text" />
                 </div> 
                 <div> 
                     <label>Telefono</label>
-                    <input id="telefono" type="number" />
+                    <input id="telefono" value=""  type="text" />
                 </div> 
                 <div> 
                     <label>Email:</label>
-                    <input id="email" type="email" required />
+                    <input id="email" value="" type="email" required />
                 </div>
+                <div id="validaEmail" style="color: red;"></div>
                 <div>
                     <button id="btn-agregar" type="submit" onclick="add_element()" >Agregar</button>
                     <input id="btn-enviar" value="Enviar" disabled type="button" onclick="display()" />
                 </div>
             </form>
         </div>
+        <div id="valida" style="color: red;"></div>
         <br/>
+        <br/>
+
         <div >
             <table id="idTable" border="1">
                 <thead>
@@ -68,10 +76,16 @@
                     <tr id="row5">
                         <th>Email</th>
                     </tr>
+                    <tr id="row6">
+                        <th>Categoria</th>
+                    </tr>
                 </thead>
-                
             </table> 
+            <div id="validaEdad" style="color: red;"></div>
         </div> 
+
         <script src="../Scripts/solicitud.js"></script>
     </body>
 </html>
+
+

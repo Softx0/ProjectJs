@@ -5,6 +5,9 @@ let arrayDireccion = new Array();
 let arrayTelefono = new Array();
 let arrayEmail = new Array();
 
+let arrayCategoria = new Array();
+arrayCategoria = ['NIETO', 'HIJO', 'PADRE', 'ABUELO'];
+
 let cantidad = 0;
 const btnCantidad = document.getElementById("button1");
 const btnAgregar = document.getElementById("btn-agregar");
@@ -13,10 +16,18 @@ const btnEnviar = document.getElementById("btn-enviar");
 function getCantidad() {
     cantidad = (Number(document.getElementById("cantSolicitud").value));
     console.log(cantidad);
-    btnCantidad.setAttribute('disabled','');
+    btnCantidad.setAttribute('disabled', '');
+    document.getElementById('cantSolicitud').value = '';
 }
 
 function add_element() {
+
+    let cedula = document.getElementById('cedula').value;
+    let nombre = document.getElementById('nombre').value;
+    let edad = document.getElementById('edad').value;
+    let email = document.getElementById('email').value;
+
+    if (cedula != "" && nombre != "" && edad != "" && email != "") {
 
         while (arrayCedula.length <= cantidad) {
             arrayCedula.push(document.getElementById('cedula').value);
@@ -60,15 +71,12 @@ function add_element() {
             break;
         }
 
-        if(arrayEmail.length == cantidad){
+        if (arrayEmail.length == cantidad) {
             btnEnviar.removeAttribute('disabled');
             btnAgregar.setAttribute('disabled', '');
         }
-    
-    // display();
-
+    }
 }
-
 
 function display() {
 
@@ -78,6 +86,7 @@ function display() {
     let row3 = document.getElementById("row3");
     let row4 = document.getElementById("row4");
     let row5 = document.getElementById("row5");
+    let row6 = document.getElementById("row6");
 
 
     if (arrayCedula.length == cantidad) {
@@ -102,6 +111,30 @@ function display() {
             let cell = row2.insertCell(n);
             cell.innerHTML = arrayEdad[index];
             n++;
+
+            let m = 1;
+            let cell2;
+            switch ((arrayEdad[index] >= 60) ? 0 :
+                (40 <= arrayEdad[index] && arrayEdad[index] <= 59) ? 1 :
+                    (20 <= arrayEdad[index] && arrayEdad[index] <= 39) ? 2 : 3) {
+                case 0:
+                    cell2 = row6.insertCell(m);
+                    cell2.innerHTML = arrayCategoria[3];
+                    break;
+                case 1:
+                    cell2 = row6.insertCell(m);
+                    cell2.innerHTML = arrayCategoria[2];
+                    break;
+                case 2:
+                    cell2 = row6.insertCell(m);
+                    cell2.innerHTML = arrayCategoria[1];
+                    break;
+                case 3:
+                    cell2 = row6.insertCell(m);
+                    cell2.innerHTML = arrayCategoria[0];
+                    break;
+            }
+            m++;
         }
     }
     if (arrayDireccion.length == cantidad) {
@@ -126,12 +159,10 @@ function display() {
             let cell = row5.insertCell(n);
             cell.innerHTML = arrayEmail[index];
             n++;
-        } 
+        }
     } else {
         let faltante = cantidad - arrayEmail.length;
         console.log(faltante);
         alert("Deben ingresarse por lo menos " + cantidad + " solicitudes. Faltan " + faltante + ".");
     }
-
-}
 }

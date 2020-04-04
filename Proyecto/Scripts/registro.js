@@ -19,24 +19,24 @@ function add_element() {
     let parcial = Number(document.getElementById('parcial').value);
     let practica = Number(document.getElementById('practicas').value);
     let final = Number(document.getElementById('final').value);
-  
-        if (parcial <= 30 && practica<=40 && final<=40){
 
-            while (arrayAsignatura.length <= cantidad) {
-                arrayAsignatura.push(document.getElementById('asignatura').value);
-                document.getElementById('asignatura').value = '';
-                console.log(arrayAsignatura);
-                break;
-            }
-        
-            while (arrayParcial.length <= cantidad) {
+    if (parcial <= 30 && practica <= 40 && final <= 40) {
+
+        while (arrayAsignatura.length <= cantidad) {
+            arrayAsignatura.push(document.getElementById('asignatura').value);
+            document.getElementById('asignatura').value = '';
+            console.log(arrayAsignatura);
+            break;
+        }
+
+        while (arrayParcial.length <= cantidad) {
 
             arrayParcial.push(parcial);
             document.getElementById('parcial').value = '';
             console.log(arrayParcial);
             break;
         }
-        
+
         while (arrayPractica.length <= cantidad) {
 
             arrayPractica.push(practica);
@@ -44,7 +44,7 @@ function add_element() {
             console.log(arrayPractica);
             break;
         }
-        
+
         while (arrayFinal.length <= cantidad) {
 
             arrayFinal.push(final);
@@ -59,7 +59,7 @@ function add_element() {
         }
     }
 }
-   
+
 
 
 function display() {
