@@ -2,6 +2,7 @@ let arrayAsignatura = Array();
 let arrayParcial = Array();
 let arrayPractica = Array();
 let arrayFinal = Array();
+let table = document.getElementById("table");
 let cantidad = 0;
 const btnCantidad = document.getElementById("button1");
 const btnAgregar = document.getElementById("button2");
@@ -15,7 +16,7 @@ let menor = document.getElementById("menor");
 function getCantidad() {
     cantidad = (Number(document.getElementById("cantAsignatura").value));
     console.log(cantidad);
-    btnCantidad.setAttribute('disabled', '');
+    btnCantidad.setAttribute('disabled','');
 }
 
 function add_element() {
@@ -59,7 +60,7 @@ function add_element() {
 
         if (arrayFinal.length == cantidad) {
             btnEnviar.removeAttribute('disabled');
-            btnAgregar.setAttribute('disabled', '');
+            btnAgregar.setAttribute('disabled','');
         }
     }
 }
@@ -114,58 +115,92 @@ function display() {
     }
 }
 
-// function calcPromedio() {
-//     let nota = document.getElementById("selectNota");
-//     var strUser = nota.options[nota.selectedIndex].value;
-//     console.log(strUser);
-//     if (strUser == 1) {
-//         let element = 0;
-//         for (let i = 0; i < arrayParcial.length; i++) {
-//              element += arrayParcial[i];
-//         }
 
-//         let promedio = element / (arrayParcial.length + 1);
-//         document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
-//     } else {
 
-//         if (strUser == 2) {
-//             let element = 0;
-//             for (let i = 0; i < arrayPractica.length; i++) {
-//                  element += arrayPractica[i];
-//             }
-    
-//             let promedio = element / (arrayPractica.length + 1);
-//             document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
-
-//         } else{
-//             if (strUser == 3) {
-//                 let element = 0;
-//                 for (let i = 0; i < arrayFinal.length; i++) {
-//                      element += arrayFinal[i];
-//                 }
-        
-//                 let promedio = element / (arrayFinal.length + 1);
-//                 document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
-//             }
-//         }
-
-//     }
-// }
 function sumCalificaciones() {
     let asignatura = document.getElementById("selectAsig").value;
     let index = arrayAsignatura.indexOf(asignatura);
-    if (index != -1) {
+
+    while (index > -1) {
         let notaParcial = arrayParcial[index];
         let notaPractica = arrayPractica[index];
         let notaFinal = arrayFinal[index];
 
-        let sumatoria = notaParcial + notaPractica + notaFinal;
-        document.getElementById("sumatoria").innerHTML = "El total de las notas es: " + sumatoria;
+        let sum = notaParcial + notaPractica + notaFinal;
+        document.getElementById("sumatoria").innerHTML = "El total de las notas es: " + sum;
+        break;
+    }
+}
+
+function calcPromedio() {
+    let nota = document.getElementById("selectNota");
+    let strUser = nota.options[nota.selectedIndex].value;
+    console.log(strUser);
+    if (strUser == 1) {
+        let element = 0;
+        for (let i = 0; i < arrayParcial.length; i++) {
+            element += arrayParcial[i];
+        }
+        console.log(element,arrayParcial.length);
+        let divisor= arrayParcial.length;
+        console.log(divisor);
+
+        let promedio = (element / divisor);
+        console.log(promedio);
+        document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
+    } else {
+
+        if (strUser == 2) {
+            let element = 0;
+            for (let i = 0; i < arrayPractica.length; i++) {
+                 element += arrayPractica[i];
+            }
+    
+            let promedio = element / (arrayPractica.length);
+            document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
+
+        } else{
+            if (strUser == 3) {
+                let element = 0;
+                for (let i = 0; i < arrayFinal.length; i++) {
+                     element += arrayFinal[i];
+                }
         
+                let promedio = element / (arrayFinal.length);
+                document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
+            }
+        }
+
     }
 }
 
 function getMayor() {
+    
+    let nota = document.getElementById("selectNota");
+    let strUser = nota.options[nota.selectedIndex].value;
+    console.log(strUser);
+    if (strUser == 1) {
+
+        let max = Math.max.apply(null,arrayParcial);
+        console.log(max);
+
+        document.getElementById("mayor").innerHTML = "La mayor nota de las notas parciales es: " + max;
+    } else {
+
+        if (strUser == 2) {
+            let max = Math.max.apply(null,arrayPractica);
+            console.log(max);
+            document.getElementById("mayor").innerHTML = "La mayor nota de las notas prácticas es: " + max;
+
+        } else{
+            if (strUser == 3) {
+                let max = Math.max.apply(null,arrayFinal);
+                console.log(max);
+                document.getElementById("mayor").innerHTML = "La mayor nota de las notas finales es: " + max;
+            }
+        }
+
+    }
 
 }
 
