@@ -206,4 +206,30 @@ function getMayor() {
 
 function getMenor() {
 
+    let nota = document.getElementById("selectNota");
+    let strUser = nota.options[nota.selectedIndex].value;
+    console.log(strUser);
+    if (strUser == 1) {
+
+        let min = Math.min.apply(null,arrayParcial);
+        console.log(min);
+        document.getElementById("menor").innerHTML = "La mayor nota de las notas parciales es: " + min;
+    } else {
+
+        if (strUser == 2) {
+            let min = Math.min.apply(null,arrayPractica);
+            console.log(min);
+            document.getElementById("menor").innerHTML = "La mayor nota de las notas prácticas es: " + min;
+
+        } else{
+            if (strUser == 3) {
+                let min = Math.min.apply(null,arrayFinal);
+                console.log(min);
+                document.getElementById("menor").innerHTML = "La mayor nota de las notas finales es: " + min;
+            }
+        }
+
+    }
+
+
 }
