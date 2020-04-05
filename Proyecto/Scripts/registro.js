@@ -16,7 +16,7 @@ let menor = document.getElementById("menor");
 function getCantidad() {
     cantidad = (Number(document.getElementById("cantAsignatura").value));
     console.log(cantidad);
-    btnCantidad.setAttribute('disabled','');
+    btnCantidad.setAttribute('disabled', '');
 }
 
 function add_element() {
@@ -60,7 +60,7 @@ function add_element() {
 
         if (arrayFinal.length == cantidad) {
             btnEnviar.removeAttribute('disabled');
-            btnAgregar.setAttribute('disabled','');
+            btnAgregar.setAttribute('disabled', '');
         }
     }
 }
@@ -141,8 +141,8 @@ function calcPromedio() {
         for (let i = 0; i < arrayParcial.length; i++) {
             element += arrayParcial[i];
         }
-        console.log(element,arrayParcial.length);
-        let divisor= arrayParcial.length;
+        console.log(element, arrayParcial.length);
+        let divisor = arrayParcial.length;
         console.log(divisor);
 
         let promedio = (element / divisor);
@@ -153,19 +153,19 @@ function calcPromedio() {
         if (strUser == 2) {
             let element = 0;
             for (let i = 0; i < arrayPractica.length; i++) {
-                 element += arrayPractica[i];
+                element += arrayPractica[i];
             }
-    
+
             let promedio = element / (arrayPractica.length);
             document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
 
-        } else{
+        } else {
             if (strUser == 3) {
                 let element = 0;
                 for (let i = 0; i < arrayFinal.length; i++) {
-                     element += arrayFinal[i];
+                    element += arrayFinal[i];
                 }
-        
+
                 let promedio = element / (arrayFinal.length);
                 document.getElementById("promedio").innerHTML = "El promedio de las notas parciales es: " + promedio;
             }
@@ -175,28 +175,41 @@ function calcPromedio() {
 }
 
 function getMayor() {
-    
+
     let nota = document.getElementById("selectNota");
     let strUser = nota.options[nota.selectedIndex].value;
     console.log(strUser);
     if (strUser == 1) {
 
-        let max = Math.max.apply(null,arrayParcial);
+        let max = Math.max.apply(null, arrayParcial);
         console.log(max);
-
-        document.getElementById("mayor").innerHTML = "La mayor nota de las notas parciales es: " + max;
+        let asignaturaIndex = arrayParcial.indexOf(max);
+        console.log(asignaturaIndex);
+        let asignaturaMayor = arrayAsignatura[asignaturaIndex];
+        console.log(asignaturaMayor);
+        document.getElementById("mayor").innerHTML = "La mayor nota de las notas parciales es " + max + " de la asignatura " + asignaturaMayor;
     } else {
 
         if (strUser == 2) {
-            let max = Math.max.apply(null,arrayPractica);
+            let max = Math.max.apply(null, arrayPractica);
             console.log(max);
-            document.getElementById("mayor").innerHTML = "La mayor nota de las notas prácticas es: " + max;
 
-        } else{
+            let asignaturaIndex = arrayPractica.indexOf(max);
+            console.log(asignaturaIndex);
+            let asignaturaMayor = arrayAsignatura[asignaturaIndex];
+            console.log(asignaturaMayor);
+            document.getElementById("mayor").innerHTML = "La mayor nota de las notas prácticas es " + max + " de la asignatura " + asignaturaMayor;
+
+        } else {
             if (strUser == 3) {
-                let max = Math.max.apply(null,arrayFinal);
+                let max = Math.max.apply(null, arrayFinal);
                 console.log(max);
-                document.getElementById("mayor").innerHTML = "La mayor nota de las notas finales es: " + max;
+                let asignaturaIndex = arrayFinal.indexOf(max);
+                console.log(asignaturaIndex);
+                let asignaturaMayor = arrayAsignatura[asignaturaIndex];
+                console.log(asignaturaMayor);
+                document.getElementById("mayor").innerHTML = "La mayor nota de las notas finales es " + max + " de la asignatura " + asignaturaMayor;
+
             }
         }
 
@@ -211,21 +224,33 @@ function getMenor() {
     console.log(strUser);
     if (strUser == 1) {
 
-        let min = Math.min.apply(null,arrayParcial);
+        let min = Math.min.apply(null, arrayParcial);
         console.log(min);
-        document.getElementById("menor").innerHTML = "La mayor nota de las notas parciales es: " + min;
+        let asignaturaIndex = arrayParcial.indexOf(min);
+        console.log(asignaturaIndex);
+        let asignaturaMenor = arrayAsignatura[asignaturaIndex];
+        console.log(asignaturaMenor);
+        document.getElementById("menor").innerHTML = "La menor nota de las notas parciales es: " + min + " de la asignatura " + asignaturaMenor;
     } else {
 
         if (strUser == 2) {
-            let min = Math.min.apply(null,arrayPractica);
+            let min = Math.min.apply(null, arrayPractica);
             console.log(min);
-            document.getElementById("menor").innerHTML = "La mayor nota de las notas prácticas es: " + min;
+            let asignaturaIndex = arrayPractica.indexOf(min);
+            console.log(asignaturaIndex);
+            let asignaturaMenor = arrayAsignatura[asignaturaIndex];
+            console.log(asignaturaMenor);
+            document.getElementById("menor").innerHTML = "La menor nota de las notas prácticas es: " + min + " de la asignatura " + asignaturaMenor;
 
-        } else{
+        } else {
             if (strUser == 3) {
-                let min = Math.min.apply(null,arrayFinal);
+                let min = Math.min.apply(null, arrayFinal);
                 console.log(min);
-                document.getElementById("menor").innerHTML = "La mayor nota de las notas finales es: " + min;
+                let asignaturaIndex = arrayFinal.indexOf(min);
+                console.log(asignaturaIndex);
+                let asignaturaMenor = arrayAsignatura[asignaturaIndex];
+                console.log(asignaturaMenor);
+                document.getElementById("menor").innerHTML = "La menor nota de las notas finales es: " + min + " de la asignatura " + asignaturaMenor;
             }
         }
 
