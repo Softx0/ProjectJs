@@ -30,8 +30,11 @@ function multiplicar() {
 }
 
 function dividir() {
-    
+    if(segundoValor !=0 ){
     division = primerValor / segundoValor;
     console.log(division);
     document.getElementById("resultado").innerHTML = "La división de estos valores es: " + division;
+} else {
+    document.getElementById("resultado").innerHTML = "Cero no puede dividir a ningún número, es indefinido.";
 }
+ }
