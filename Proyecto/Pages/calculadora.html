@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div>
+        <form id="registroId" action="">
+
+            <div>
+                <label>Ingresar primer valor:</label>
+                <input type="number" id="primerValor" />
+
+
+            </div>
+            <br>
+            <div>
+                <label>Ingresar segundo valor:</label>
+                <input type="number" id="segundoValor" />
+                <input id="button2" type="button" value="Ingresar valores" onclick="getValores()" />
+
+            </div>
+            <br>
+            <div>
+                <input id="button2" type="button" value="Sumar" onclick="sumar()" />
+                <input id="button2" type="button" value="Restar" onclick="restar()" />
+                <input id="button2" type="button" value="Multiplicar" onclick="multiplicar()" />
+                <input id="button2" type="button" value="Dividir" onclick="dividir()" />
+
+            </div>
+            <br>
+            <div id="resultado">
+
+            </div>
+        </form>
+    </div>
+    <script src="../Scripts/calculadora.js"></script>
+</body>
+
+</html>
