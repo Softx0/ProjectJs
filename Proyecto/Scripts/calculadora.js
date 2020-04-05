@@ -24,7 +24,14 @@ function restar() {
 
 function multiplicar() {
     
-    suma = primerValor + segundoValor;
-    console.log(suma);
-    document.getElementById("resultado").innerHTML = "La sumatoria de estos valores es: " + suma;
+    multiplicacion = primerValor * segundoValor;
+    console.log(multiplicacion);
+    document.getElementById("resultado").innerHTML = "La multiplicación de estos valores es: " + multiplicacion;
+}
+
+function dividir() {
+    
+    division = primerValor / segundoValor;
+    console.log(division);
+    document.getElementById("resultado").innerHTML = "La división de estos valores es: " + division;
 }
