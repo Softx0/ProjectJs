@@ -1,5 +1,5 @@
 # ProjectJs
-# A few applications
+## A few applications
 
 Web application for practice project, while learning javascript on the go. Seeking to practice certain knowledge and keep growing
 
